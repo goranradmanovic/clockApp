@@ -1,6 +1,6 @@
 # Clock App
 
-## This is simple project created with HTML&CSS and JS
+## Project created with HTML&CSS and JS
 
 ## Project preview
 
