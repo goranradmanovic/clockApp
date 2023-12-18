@@ -1,0 +1,86 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: content-box;
+	font-family: system-ui, sans-serif;
+}
+
+body {
+	width: 100dvw;
+	height: 100dvh;
+	display: grid;
+	place-content: center;
+	background: rgb(112, 193, 179);
+	background: linear-gradient(45deg, rgba(112, 193, 179, 1) 0%, rgba(36, 123, 159, 1) 100%);
+}
+
+.datetime {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding-bottom: 40px;
+	font-weight: 400;
+	text-align: center;
+	color: white;
+}
+
+.time {
+	font-size: 3rem;
+	font-family: monospace;
+}
+
+.date {
+	font-size: 1.5rem;
+	font-family: math;
+}
+
+.clock {
+	position: relative;
+	width: 260px;
+	aspect-ratio: 1;
+	border-radius: 50%;
+	border: 6px solid white;
+}
+
+.clock__dot {
+	position: absolute;
+	top: calc(50% - 6px);
+	left: calc(50% - 6px);
+	width: 12px;
+	aspect-ratio: 1;
+	border-radius: 50%;
+	z-index: 4;
+	background-color: white;
+}
+
+.hand {
+	position: absolute;
+	top: 50%;
+	right: 50%;
+	width: 50%;
+	height: 4px;
+	border-radius: 6px;
+	rotate: 90deg;
+	transform-origin: 100%;
+	transition-timing-function: cubic-bezier(.1, 2.7, .58, 1);
+	background-color: white;
+}
+
+.hand.hand__h {
+	width: 30%;
+	z-index: 1;
+}
+
+.hand.hand__m {
+	width: 40%;
+	height: 3px;
+	z-index: 2;
+}
+
+.hand.hand__s {
+	width: 45%;
+	height: 2px;
+	z-index: 3;
+	background-color: #ee791a;
+}
